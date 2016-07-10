@@ -10,7 +10,7 @@ There is nothing really special here that you couldn't do with your own nginx or
 docker run -d \
     --name localtunnel-nginx \
     --restart always \
-    -p 443:443 -p 80:80 \
+    --net host \
     -v $HOME/ssl:/etc/nginx/ssl/ \
     defunctzombie/localtunnel-nginx:latest
 ```
